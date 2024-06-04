@@ -1,9 +1,9 @@
 import streamlit as st
 import random
 import time
-import firebase_admin
-from firestore import firebase_admin
-#from firebase_admin import credentials, auth
+#import firebase_admin
+from google.cloud import firebase_admin
+from firebase_admin import credentials, auth
 
 
 if not firebase_admin._apps:
