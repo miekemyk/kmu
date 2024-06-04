@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit_authenticator as stauth
 import random
 import time
 import firebase_admin
