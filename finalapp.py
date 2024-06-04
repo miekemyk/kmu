@@ -2,7 +2,9 @@ import streamlit as st
 import random
 import time
 import firebase_admin
-from firebase_admin import credentials, auth
+from firestore import firebase_admin
+#from firebase_admin import credentials, auth
+
 
 if not firebase_admin._apps:
     # Initialize Firebase Admin SDK 
