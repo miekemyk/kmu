@@ -4,6 +4,7 @@ import time
 import firebase_admin
 from firebase_admin import credentials, auth
 
+
 if not firebase_admin._apps:
     # Initialize Firebase Admin SDK 
     cred = credentials.Certificate("/Users/miekeklemann/Documents/Privat/Uni/login.json")
