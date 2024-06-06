@@ -1,8 +1,7 @@
 import streamlit as st
 import random
 import time
-#import firebase_admin
-from google.cloud import firebase_admin
+import firebase_admin
 from firebase_admin import credentials, auth
 
 
