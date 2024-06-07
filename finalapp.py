@@ -6,6 +6,22 @@ import json
 from firebase_admin import credentials, initialize_app, auth
 import toml
 
+# Hard-coded theme settings
+st.set_page_config(
+    #page_title="FragenFabrik",
+    #page_icon=":rocket:",
+    layout="wide",
+    #initial_sidebar_state="expanded",
+    primary_color="#3b659c",
+    background_color="#ddedea",
+    secondary_background_color="#ffa647",
+    text_color="#080808",
+    font="sans serif"
+)
+
+# Your Streamlit app code here
+
+
 if not firebase_admin._apps:
     firebase_config = st.secrets["firebase"]
 
