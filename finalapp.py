@@ -6,9 +6,10 @@ from firebase_admin import credentials, auth
 
 
 if not firebase_admin._apps:
+    firebase_config = st.secrets["firebase"]
     # Initialize Firebase Admin SDK 
-    cred = credentials.Certificate("login_info.json")
-    firebase_admin.initialize_app(cred)
+    cred = credentials.Certificate(firebase_config)
+    initialize_app(cred)
 
 # Set title
 st.title("FragenFabrik")
