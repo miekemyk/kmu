@@ -6,9 +6,14 @@ from firebase_admin import credentials, auth
 
 
 if not firebase_admin._apps:
+    # Load Firebase credentials from Streamlit secrets
     firebase_config = st.secrets["firebase"]
-    # Initialize Firebase Admin SDK 
-    cred = credentials.Certificate(firebase_config)
+    
+    # Convert the secrets to a JSON string and then to a dictionary
+    firebase_credentials = json.loads(json.dumps(firebase_config))
+    
+    # Initialize the Firebase app with the credentials
+    cred = credentials.Certificate(firebase_credentials)
     initialize_app(cred)
 
 # Set title
