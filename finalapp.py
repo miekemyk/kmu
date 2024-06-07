@@ -2,7 +2,8 @@ import streamlit as st
 import random
 import time
 import firebase_admin
-from firebase_admin import credentials, auth
+import json
+from firebase_admin import credentials, initialize_app
 
 
 if not firebase_admin._apps:
