@@ -6,33 +6,6 @@ import json
 from firebase_admin import credentials, initialize_app, auth
 import toml
 
-# Load configuration from .streamlit/config.toml
-config = toml.load("config.toml")
-
-# Access theme configuration settings
-theme = config.get("theme", {})  # Use .get() to handle missing keys gracefully
-
-# Access specific theme configuration settings
-primary_color = theme.get("primaryColor", "#3b659c")
-background_color = theme.get("backgroundColor", "#ddedea")
-secondary_background_color = theme.get("secondaryBackgroundColor", "#ffa647")
-text_color = theme.get("textColor", "#080808")
-font = theme.get("font", "sans serif")
-
-# Use theme configuration in your Streamlit app
-st.set_page_config(
-    page_title="My Streamlit App",
-    page_icon=":rocket:",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    primary_color=primary_color,
-    background_color=background_color,
-    secondary_background_color=secondary_background_color,
-    text_color=text_color,
-    font=font
-)
-#---
-
 if not firebase_admin._apps:
     firebase_config = st.secrets["firebase"]
 
