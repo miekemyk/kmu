@@ -4,7 +4,26 @@ import time
 import firebase_admin
 import json
 from firebase_admin import credentials, initialize_app, auth
+import toml
 
+# Load configuration from config.toml
+config = toml.load("config.toml")
+
+# Access specific configuration settings
+title = config["title"]
+description = config["description"]
+theme = config["theme"]
+
+# Use configuration in your Streamlit app
+st.set_page_config(
+    page_title=title,
+    page_icon=":rocket:",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+st.title(title)
+st.write(description)
 
 if not firebase_admin._apps:
     firebase_config = st.secrets["firebase"]
