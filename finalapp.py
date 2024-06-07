@@ -12,7 +12,7 @@ st.set_page_config(
     page_icon=":rocket:",
     layout="wide",
     initial_sidebar_state="expanded",
-    primary_color="#3b659c",
+    #primary_color="#3b659c",
     background_color="#ddedea",
     secondary_background_color="#ffa647",
     text_color="#080808",
