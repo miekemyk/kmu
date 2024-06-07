@@ -3,7 +3,7 @@ import random
 import time
 import firebase_admin
 import json
-from firebase_admin import credentials, initialize_app
+from firebase_admin import credentials, initialize_app, auth
 
 
 if not firebase_admin._apps:
